@@ -30,8 +30,11 @@ def test_no_special_character():
 def test_has_special_character():
     assert "no special character" not in check_password("Abcdefg1!")
     
-def test_is_too_common():
+def test_not_too_common():
     assert "too common" not in check_password("Abcdefg1!")
 
-def test_not_too_common():
+def test_is_too_common():
     assert "too common" in check_password("password")
+
+def test_strong_password():
+    assert check_password("Abcdef1!") == []

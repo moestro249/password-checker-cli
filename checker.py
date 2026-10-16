@@ -1,5 +1,7 @@
 import string 
 
+COMMON_PASSWORDS = {"password", "123456", "qwerty", "12345678", "letmein"}
+
 def check_password(password):
     problems = []
     if len(password) < 8:
@@ -12,7 +14,6 @@ def check_password(password):
         problems.append("no digit")
     if not any( c in string.punctuation for c in password):
         problems.append("no special character")
-    COMMON_PASSWORDS = {"password", "123456", "qwerty", "12345678", "letmein"}
     if password.lower() in COMMON_PASSWORDS:
         problems.append("too common")
     return problems

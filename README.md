@@ -1,3 +1,5 @@
+[![Tests](https://github.com/moestro249/password-checker-cli/actions/workflows/tests.yml/badge.svg)](https://github.com/moestro249/password-checker-cli/actions/workflows/tests.yml)
+
 # password-checker-cli
 
 A console tool that checks the strength of a password and lists every problem it finds.

@@ -12,7 +12,7 @@ def check_password(password):
         problems.append("no uppercase letter")
     if not any(c.isdigit() for c in password):
         problems.append("no digit")
-    if not any( c in string.punctuation for c in password):
+    if not any(c in string.punctuation for c in password):
         problems.append("no special character")
     if password.lower() in COMMON_PASSWORDS:
         problems.append("too common")
